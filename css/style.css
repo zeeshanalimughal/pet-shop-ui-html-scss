@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f7e8ef;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.home_screen {
+  margin-top: 2rem;
+  max-width: 370px;
+  width: 100%;
+  min-height: 730px;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to top, #00000099, transparent), url(../images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+}
+.home_screen .content {
+  color: #ffffff;
+  padding: 0 1.2rem 2rem 1.2rem;
+}
+.home_screen .content .title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 50px;
+  line-height: 3.2rem;
+}
+.home_screen .content .description {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+.home_screen .content button {
+  padding: 8px 14px;
+  box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #cf2f75;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+.home_screen .content button:hover {
+  transform: scale(1.1);
+}
+
+.shop_screen {
+  margin-bottom: 2rem;
+  position: relative;
+  max-width: 370px;
+  width: 100%;
+  height: 730px;
+  background-color: #ffffff;
+  padding: 1.5rem 1rem 0 1rem;
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.shop_screen header .title_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop_screen header .title_row .heading {
+  color: #cf2f75;
+  line-height: 2.2rem;
+}
+.shop_screen header .title_row .subtitle {
+  font-size: 11px;
+}
+.shop_screen header .menu_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.shop_screen header .menu_bar div {
+  height: 3px;
+  border-radius: 10px;
+  background-color: #cf2f75;
+  margin-bottom: 5px;
+}
+.shop_screen header .menu_bar div:nth-child(1) {
+  width: 15px;
+  margin-left: auto;
+}
+.shop_screen header .menu_bar div:nth-child(2) {
+  width: 25px;
+}
+.shop_screen header .menu_bar div:nth-child(3) {
+  width: 15px;
+  margin-right: auto;
+}
+.shop_screen .search_box {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  margin-top: 1.3rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.shop_screen .search_box .search_input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 10px;
+  color: #222;
+}
+.shop_screen .search_box ion-icon {
+  color: #cf2f75;
+  font-size: 18px;
+  cursor: pointer;
+}
+.shop_screen .categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.shop_screen .categories .category {
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.shop_screen .categories .category .image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #facfe2;
+}
+.shop_screen .categories .category .image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -10px;
+  left: 0;
+  object-fit: contain;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+.shop_screen .categories .category .image img:hover {
+  transform: scale(1.5);
+}
+.shop_screen .categories .category .title {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.shop_screen .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.shop_screen .link span {
+  display: block;
+}
+.shop_screen .link span:first-child {
+  font-size: 17px;
+  font-weight: 600;
+  color: #cf2f75;
+}
+.shop_screen .link span:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.shop_screen .products_wrapper {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  padding: 10px;
+  overflow-y: auto;
+}
+.shop_screen .products_wrapper::-webkit-scrollbar {
+  width: 0;
+}
+.shop_screen .products_wrapper .product {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop_screen .products_wrapper .product:last-child {
+  margin-bottom: 0;
+}
+.shop_screen .products_wrapper .product .product_image {
+  min-height: 150px;
+  margin-right: 15px;
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.shop_screen .products_wrapper .product .product_image img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.shop_screen .products_wrapper .product .product_details .product_name {
+  font-size: 18px;
+  color: #cf2f75;
+  font-weight: 600;
+}
+.shop_screen .products_wrapper .product .product_details .product_desc {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.shop_screen .products_wrapper .product .product_details .product_btn {
+  padding: 6px 10px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #cf2f75;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+.shop_screen .products_wrapper .product .product_details .product_btn:hover {
+  transform: scale(1.05);
+}
+.shop_screen .bottom_nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff99;
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+.shop_screen .bottom_nav ul {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop_screen .bottom_nav ul li a ion-icon {
+  color: #cf2f75;
+  font-size: 30px;
+  transition: all 0.3s;
+}
+.shop_screen .bottom_nav ul li a ion-icon:hover {
+  transform: scale(1.3);
+}
+
+/*# sourceMappingURL=style.css.map */
